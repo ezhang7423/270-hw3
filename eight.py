@@ -55,7 +55,6 @@ def saddle_helper(A, dim):
 
     if dim == 0:
         for i in range(A.shape[dim]):        
-            print(i)
             model += (
                 np.dot(A.T[i], y_np) <= v,
                 f"security policy def {i}",
@@ -75,6 +74,6 @@ def saddle_helper(A, dim):
 
     return y, v
 
-
-solve_for_saddle(A)
-solve_for_saddle(B)
+if __name__ == '__main':
+    solve_for_saddle(A)
+    solve_for_saddle(B)
